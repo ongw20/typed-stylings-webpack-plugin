@@ -1,4 +1,4 @@
-# typed-stylings-webpack-plugin
+# @ongw20/typed-stylings-webpack-plugin
 
 Creates TypeScript definitions for style files using [typed-css-modules](https://github.com/Quramy/typed-css-modules). Per default creates defintions for .css, .scss and .sass (scss/sass if node-sass is installed).
 
@@ -12,7 +12,8 @@ If you are using ForkTsCheckerWebpackPlugin you can configure the below in your 
 plugins: [
   ...
   new ForkTsCheckerTypedStylingsWebpackPlugin({
-    includePaths: ['src']
+    includePaths: ['src'],
+    exclude: /ignore/i  // RegExp to ignore pattern
   }),
   ...
 ]
@@ -29,6 +30,7 @@ plugins: [
   ...
   new TypedStylingsWebpackPlugin({
     includePaths: ['src'],
+    exclude: /ignore/i,
     asyncHook: 'beforeCompile'
   }),
   ...
@@ -39,6 +41,8 @@ plugins: [
 
 - **includePaths** `string|string[]`:
   Which directories to look for styling files.
+- **exclude** `RegExp`:
+  Which pattern to ignore.
 - **asyncHook** `string`
   Which webpack plugin async hook to hook into.
 - **nodeModulesPath** `string`
