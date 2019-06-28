@@ -4,6 +4,9 @@
   "description": "Create TypeScript definitions for style files",
   "main": "lib/index.js",
   "typings": "./lib/index.d.ts",
+  "files": [
+    "lib"
+  ],
   "scripts": {
     "build": "tsc"
   },
