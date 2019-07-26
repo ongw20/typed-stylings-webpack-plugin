@@ -102,7 +102,12 @@ export class TypedStylingsWebpackPlugin {
 
   private getFileContentAsCss(file: string) {
     const preProcessor = this.preProcessors.find(preProcessor => preProcessor.test(file))
-    return preProcessor ? preProcessor.readSync(file) : null
+    let content = null
+    if (preProcessor) {
+      try {
+        content = preProcessor.readSync(file)
+      } catch(_) {}
+    }
+    return content
   }
-
 }
