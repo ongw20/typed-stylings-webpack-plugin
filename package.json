@@ -1,6 +1,6 @@
 {
   "name": "@ongw20/typed-stylings-webpack-plugin",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "description": "Create TypeScript definitions for style files",
   "main": "lib/index.js",
   "typings": "./lib/index.d.ts",
