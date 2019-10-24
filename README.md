@@ -4,6 +4,11 @@ Creates TypeScript definitions for style files using [typed-css-modules](https:/
 
 The goal of the plugin is to generate TypeScript defintions before type checking is done by any other webpack plugin/loader.
 
+## Install
+```
+npm install --save-dev @ongw20/typed-stylings-webpack-plugin
+```
+
 ## Configure with ForkTsCheckerWebpackPlugin
 
 If you are using ForkTsCheckerWebpackPlugin you can configure the below in your webpack config:
