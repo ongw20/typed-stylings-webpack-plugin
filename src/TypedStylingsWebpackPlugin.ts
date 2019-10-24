@@ -10,9 +10,9 @@ export interface Options {
   includePaths: string | string[]
   nodeModulesPath?: string
   exclude?: RegExp
-  preProcessors: Preprocessor[]
-  dtsOptions: object
-  cleanup: boolean
+  preProcessors?: Preprocessor[]
+  dtsOptions?: object
+  cleanup?: boolean
 }
 
 export class TypedStylingsWebpackPlugin {
